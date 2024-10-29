@@ -1,0 +1,23 @@
+1. Prikazati sve gradove koji pocinju sa 'Ku' i country_id veci od 51
+	SELECT * FROM city;
+	SELECT * FROM city WHERE city LIKE 'Ku%';
+	SELECT * FROM city WHERE city LIKE 'Ku%' AND country_id > 51;
+
+2. Prikazati id za sledece kategorije filmova: Action, Comedy, Documentary
+	SELECT * FROM category;
+	SELECT * FROM category WHERE name IN ('Action', 'Comedy', 'Documentary');
+	SELECT category_id FROM category WHERE name IN ('Action', 'Comedy', 'Documentary');
+
+3. Prikazati naslove filmova čiji je rejting R ili PG i čiji rental_rate iznosi više od 2, ali manje od 4.5
+	SELECT * FROM film;
+	SELECT * FROM film WHERE rating IN ('R', 'PG');
+	SELECT title FROM film WHERE rating IN ('R', 'PG') AND rental_rate > 2 AND rental_rate < 4.5;
+
+4. Prikazati najdužu, najkraću i prosečnu dužinu trajanja svih filmova
+	SELECT * FROM film;
+	SELECT MAX(length), MIN(length), AVG(length) FROM film;
+
+5. Koliko ima filmova koji traju tačno 120 minuta
+	SELECT * FROM film;
+	SELECT * FROM film WHERE length = 120;
+	SELECT COUNT(*) FROM film WHERE length = 120;

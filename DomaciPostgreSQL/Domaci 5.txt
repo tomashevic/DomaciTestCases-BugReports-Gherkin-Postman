@@ -1,0 +1,14 @@
+1. Prikazi sve informacije o filmovima ciji je rental rate 2.99
+	SELECT * FROM film;
+	SELECT * FROM film WHERE rental_rate = 2.99;
+
+2. Prikazati sve informacije o glumcima cije je prezime Cruise ili Cruz
+	SELECT * FROM actor;
+	SELECT * FROM actor WHERE last_name = 'Cruise'
+	SELECT * FROM actor WHERE last_name = 'Cruise' OR last_name = 'Cruz'
+
+
+3. Prikazati samo naslov i trajanje filma ciji je rating PG ili PG-13
+	SELECT * FROM film;
+	SELECT * FROM film WHERE rating = 'PG' OR rating = 'PG-13';
+	SELECT title, length FROM film WHERE rating = 'PG' OR rating = 'PG-13';
